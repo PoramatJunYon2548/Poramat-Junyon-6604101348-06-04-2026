@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
   command = "npx quasar build"
-  publish = "frontend/dist/spa"
+  publish = "dist/spa"
 
 [context.production.environment]
   # This value should be set via Netlify UI, not committed in plaintext.
