@@ -2,12 +2,17 @@ import { defineConfig } from '@prisma/config';
 import 'dotenv/config';
 
 export default defineConfig({
-    schema: 'prisma/schema.prisma',
-    datasource: {
-        provider: 'postgresql',
-        url: process.env.DATABASE_URL
+  schema: 'prisma/schema.prisma',
+  datasource: {
+    url: process.env.DIRECT_URL,
+  },
+  migrate: {
+    async adapter() {
+      const { PrismaPg } = await import('@prisma/adapter-pg');
+      return new PrismaPg({
+        connectionString: process.env.DIRECT_URL,
+      });
     },
-    migrations: {
-        seed: 'node prisma/seed.js'
-    }
+    seed: 'node prisma/seed.js'
+  },
 });

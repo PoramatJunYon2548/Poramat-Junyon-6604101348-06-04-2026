@@ -22,8 +22,8 @@ async function main() {
             description: 'Deploy Backend to Render and Frontend to Netlify',
         },
         {
-            title: 'นายณัฐภูมิ หลู่จิ่ง',
-            description: '6604101329',
+            title: 'นายปรเมษฐ์ จันทร์ย้อน',
+            description: '6604101348',
         },
     ];
 

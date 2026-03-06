@@ -44,7 +44,11 @@ app.get('/api/demo', (req, res) => {
   });
 });
 
-// health check root
+// health check root (also used by Render/Netlify checks)
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true });
+});
+
 app.get('/', (_req, res) => {
   res.json({
     message: 'API พร้อมใช้งาน (Supabase + Prisma + Quasar Frontend)',
