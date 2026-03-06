@@ -1,0 +1,10 @@
+[build]
+  base = "frontend"
+  command = "npx quasar build"
+  publish = "frontend/dist/spa"
+
+[context.production.environment]
+  # This value should be set via Netlify UI, not committed in plaintext.
+  # Replace the placeholder with your Render backend URL ending in /api,
+  # or set the same value directly in Netlify's Site > Environment > Variables.
+  VITE_API_URL = "https://<your-render-app>.onrender.com/api"
