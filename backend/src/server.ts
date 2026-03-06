@@ -15,12 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: [
-    'https://69aa7ff1a295256921349a3d--poramat348.netlify.app',
-    'https://poramat348.netlify.app',
-    'http://localhost:5173',
-    'http://localhost:3000',
-  ],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true,
 }));
