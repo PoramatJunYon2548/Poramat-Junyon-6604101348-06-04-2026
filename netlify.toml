@@ -4,4 +4,4 @@
   publish = "dist/spa"
 
 [context.production.environment]
-  API_URL = "https://poramat-junyon-6604101348-06-04-2026.onrender.com"
+  VITE_API_URL = "https://poramat-junyon-6604101348-06-04-2026.onrender.com/api"
