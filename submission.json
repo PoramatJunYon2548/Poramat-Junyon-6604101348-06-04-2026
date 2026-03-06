@@ -3,7 +3,7 @@
   "name": "นายปรเมษฐ์ จันทร์ย้อน",
   "github_repo": "https://github.com/poramat-junyon/poramat-junyon-6604101348-06-04-2026.git",
   "backend_base_url": "https://poramat-junyon-6604101348-06-04-2026.onrender.com",
-  "frontend_url": "https://poramat-junyon-6604101348-06-04-2026.netlify.app",
+  "frontend_url": "https://69aa875d2e806f6bf54793f9--poramat348.netlify.app/#/",
   "api": {
     "health": "https://poramat-junyon-6604101348-06-04-2026.onrender.com/api/health",
     "tasks": "https://poramat-junyon-6604101348-06-04-2026.onrender.com/api/tasks"
