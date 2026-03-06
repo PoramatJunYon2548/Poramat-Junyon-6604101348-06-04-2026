@@ -1,0 +1,18 @@
+# Render service configuration for automatic deployment
+# this file ensures the backend service is created with the correct settings
+# you still need to add the DATABASE_URL secret through Render dashboard.
+
+services:
+  - type: web
+    name: backend
+    env: node
+    branch: main
+    rootDir: backend
+    # even if render ignores rootDir for some reason, explicitly cd into backend
+    buildCommand: "cd backend && npm install && npx prisma generate && npm run build"
+    startCommand: "cd backend && npm start"
+    envVars:
+      - key: PORT
+        value: "3000"
+      - key: DATABASE_URL
+        fromSecret: DATABASE_URL
